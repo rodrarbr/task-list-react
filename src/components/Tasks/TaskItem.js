@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Card from '../UI/Card';
-import './TaskItem.css'
+import './TaskItem.css';
+
 
 const TaskItem = (props) =>{
     const [title, setTitle] = useState(props.title);

@@ -22,16 +22,18 @@ const App = () => {
   const [tasks, setTasks] = useState(modelTasks);
 
   const addTaskHandler = task =>{
-    setTasks(oldTasks => {
-      return [task, ...oldTasks]
+    setTasks((oldTasks) => {
+      return [...oldTasks, task];
     });
+    console.log(tasks)
   };
+  
   
 
   return (
     <div>
       <NewTask onAddTask={addTaskHandler}/>
-      <Tasks item={tasks}/>
+      <Tasks tasks={tasks}/>
     </div>
   );
 };

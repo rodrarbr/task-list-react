@@ -3,19 +3,22 @@ import Card from "../UI/Card";
 import './Tasks.css';
 
 const Tasks = (props) =>{
+
+    const renderTaskItem = (tasks, index) =>(
+
+        <TaskItem
+            key = {index}
+            title={tasks.title}
+        />
+    );
+
     return(
         <Card className='tasks'>
-            <TaskItem
-            title={props.item[0].title}
-            />
-            <TaskItem
-            title={props.item[1].title}
-            />
-            <TaskItem
-            title={props.item[2].title}
-            />
+            {props.tasks?.map((tasks, index) => renderTaskItem(tasks, index))}
         </Card>
     );
 };
+
+
 
 export default Tasks;

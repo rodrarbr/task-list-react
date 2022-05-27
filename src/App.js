@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import Tasks from "./components/Tasks/Tasks";
 import NewTask from "./components/NewTasks/NewTask"
+// import Card from "./components/UI/Card";
 
 const modelTasks = [
   {
@@ -25,16 +26,15 @@ const App = () => {
     setTasks((oldTasks) => {
       return [...oldTasks, task];
     });
-    console.log(tasks)
+    // console.log(tasks)
   };
-  
-  
 
   return (
     <div>
       <NewTask onAddTask={addTaskHandler}/>
       <Tasks tasks={tasks}/>
     </div>
+    
   );
 };
 

@@ -10,12 +10,15 @@ const Tasks = (props) =>{
             key = {index}
             title={tasks.title}
         />
+        
     );
 
     return(
+        
         <Card className='tasks'>
             {props.tasks?.map((tasks, index) => renderTaskItem(tasks, index))}
         </Card>
+        
     );
 };
 
